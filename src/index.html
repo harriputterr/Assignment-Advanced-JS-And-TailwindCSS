@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <div class="bg-teal-800 p-8 rounded shadow-2xl">
+      <!-- Header -->
+      <div class="mt-6">
+        <h2 class="text-2xl font-bold text-center text-gray-200">Really Good Unit Calculator</h2>
+      </div>
+      <!-- Bio -->
+      <div>
+        <p class="mt-2 text-gray-400 text-center">
+          By Harsingh Sekhon, Jaskaran Sran, Kevin Le Huu, Tristan Idolor and
+          Troy Franks
+        </p>
+      </div>
+      <!-- Calculations -->
+      <div class="mt-8">
+        <div class="mt-4">
+          <div class="bg-gray-400 p-4 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold text-teal-700">Conversion Calculator</h3>
+            <p class="mt-2">
+                Please select the unit you would like to convert from and enter the amount that you would
+                like to be converted along with the unit you would like the amount to be converted to!
+            </p>
+            <!-- Calculator Form -->
+            <form class="mt-4" id="conversion-form">
+              <div id="conversionButtons" class="flex justify-evenly mt-10 mb-7"> 
+                <button class="btn btn-blue shadow-md" id="distanceButton">Distance</button>
+                <button class="btn btn-blue shadow-md" id="temperatureButton">Temperature</button>
+                <button class="btn btn-blue shadow-md" id="weightButton">Weight</button>
+                <!-- From -->
+              </div>
+                  <label for="from" class="text-teal-700 font-semibold">
+                    From:
+                  </label>
+                <div>
+                  <select id="fromDropDown" class="bg-gray-400">
+                    <option value="Kilometers" id="fromDropDownId1">Kilometers</option>
+                    <option value="Miles" id="fromDropDownId2">Miles</option>
+                  </select>
+                </div>
+                  <div class="mb-4">
+                    <label for="kilometers" class="block text-sm font-medium text-gray-700" id="fromLabel"></label>
+                    <input type="number" id="fromInput" name="kilometers" class="mt-1 p-2 w-full border rounded-md bg-gray-300" />
+                  </div>
+                  <!-- To -->
+                    <div>
+                  <label for="to" class="text-teal-700 font-semibold">
+                    To:
+                  </label>
+                </div>
+                  <select id="toDropDown" class="bg-gray-400">
+                    <option value="Kilometers" id="toDropDownId1">Kilometers</option>
+                    <option value="Miles" id="toDropDownId2">Miles</option>
+                  </select>
+              <div class="mb-4">
+                <label for="miles" class="block text-sm font-medium text-gray-700" id="toLabel"></label>
+                <input type="number" id="toReadOnlyValue" name="miles" class="mt-1 p-2 w-full border rounded-md bg-gray-300" readonly />
+              </div>
+              <!-- Convert Button -->
+              <div class="flex justify-center">
+              <button type="button" class="shadow-md font-semibold bg-teal-700 text-gray-300 pr-7 pl-7 pt-2 pb-2 m-2 rounded-md hover:bg-slate-500" onclick="convert()">
+                Convert
+              </button>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="conversion.js"></script>
+</body>
+</html>
+
